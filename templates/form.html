@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/" method="POST">
+    <label for="user_name">Username
+        <input type="text" id="user_name" name="user_name" value="{{user_name}}"/>
+    </label>
+    <p class="error">{{error_name}}</p>
+
+    <label for="password">Password
+        <input type="password" id="password" name="password">
+    </label>
+    <p class="error">{{error_pw1}}</p>
+
+    <label for="retype">Retype Password
+        <input type="password" id="retype" name="retype" />
+    </label>
+    <p class="error">{{error_pw2}}</p>
+
+    <label for="email">Email (optional)
+        <input type="text" id="email" name="email" value="{{email}}" />
+    </label>
+    <p class="error">{{error_email}}</p>
+
+    <input type="submit" value="Submit" />
+    
+
+</form>
+
+
+
+{% endblock %}
